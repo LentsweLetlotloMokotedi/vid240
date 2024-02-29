@@ -5,4 +5,27 @@
 
 .starting h1 {
   font-size: 5rem;
+  display: inline-block;
+  /* Ensure inline-block for each letter */
+}
+
+/* Define animation keyframes */
+@keyframes jump {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+    /* Adjust as needed */
+  }
+}
+
+/* Apply animation to each letter */
+.starting h1 span {
+  display: inline-block;
+  animation: jump 5s infinite;
+  /* Adjust duration as needed */
 }
